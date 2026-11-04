@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stg_campaigns
+    description: >
+      Modelo de staging con las campañas por proyecto limpias
+      y normalizadas a partir de la fuente raw_campaigns. Solo incluye registros
+      con los campos obligatorios completos y coherentes.
+
+    columns:
+      - name: campaign_id
+        description: >
+          Identificador único de la campaña. Campo obligatorio y clave
+          del modelo.
+        tests:
+          - not_null
+          - unique
+
+      - name: project_id
+        description: >
+          Identificador del proyecto al que pertenece la campaña.
+          Campo obligatorio.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_projects')
+              field: project_id
+
+      - name: campaign_name
+        description: >
+          Nombre de la campaña. Campo opcional.
+
+      - name: campaign_start_date
+        description: >
+          Fecha de inicio de la campaña. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: campaign_end_date
+        description: >
+          Fecha de fin de la campaña. Campo obligatorio y posterior
+          o igual a la fecha de inicio.
+        tests:
+          - not_null
+
+      - name: total_visits_planned
+        description: >
+          Número total de visitas planificadas para la campaña.
+          Campo obligatorio y no negativo.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Fecha de creación del registro de campaña. Campo opcional.
+
+      - name: updated_at
+        description: >
+          Fecha de la última actualización del registro de campaña.
+          Campo opcional.

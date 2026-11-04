@@ -1,0 +1,47 @@
+
+version: 1
+
+destination:
+  name: primer_impacto_postgres
+  connector: destination-postgres
+  database: primer_impacto
+  schema: raw
+  host: postgres
+  port: 5432
+  username: ${POSTGRES_USER}
+  password: ${POSTGRES_PASSWORD}
+
+defaults:
+  source_type: file
+  format: csv
+  storage: local
+  reader_options:
+    dtype: string
+    delimiter: ","
+
+  sync_mode: full_refresh
+  destination_sync_mode: overwrite
+  cursor_field: null
+
+sources:
+
+  - name: raw_workers
+    file: raw_workers.csv
+
+  - name: raw_visits
+    file: raw_visits.csv
+
+  - name: raw_routes
+    file: raw_routes.csv
+
+  - name: raw_projects
+    file: raw_projects.csv
+
+  - name: raw_campaigns
+    file: raw_campaigns.csv
+
+  - name: pos_omni
+    file: pos_omni.csv
+
+  - name: pos_gi
+    file: pos_gi.csv

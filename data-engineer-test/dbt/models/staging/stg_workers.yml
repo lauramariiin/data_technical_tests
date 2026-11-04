@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_workers
+    description: >
+      Modelo de staging con los workers limpios y normalizados
+      a partir de la fuente raw_workers. Contiene únicamente registros
+      con los campos obligatorios completos.
+
+    columns:
+      - name: employee_id
+        description: >
+          Identificador único del empleado. Es obligatorio y se utiliza
+          como clave del modelo.
+        tests:
+          - not_null
+          - unique
+
+      - name: employee_first_name
+        description: >
+          Nombre del empleado, sin espacios iniciales o finales.
+          Es obligatorio.
+        tests:
+          - not_null
+
+      - name: employee_active_status
+        description: >
+          Indica si el empleado está activo. Se convierte a booleano:
+          true o false.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: employee_address_province
+        description: >
+          Provincia del empleado normalizada: sin espacios innecesarios,
+          en mayúsculas, sin acentos y con nombres compuestos corregidos.
+          Es obligatoria.
+        tests:
+          - not_null
+
+      - name: employee_contract_type
+        description: >
+          Tipo de contrato del empleado, normalizado en mayúsculas.
+          Es obligatorio.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['FIJO', 'EV90', 'EV180', 'INDF', 'OBRA']
+
+      - name: created_at
+        description: >
+          Fecha de creación del registro del empleado, convertida a DATE.
+        

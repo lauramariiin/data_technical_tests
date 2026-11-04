@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: stg_pos_omni
+    description: >
+      Modelo de staging con los puntos de venta del sistema propio,
+      limpios y normalizados a partir de la fuente pos_omni. Solo incluye registros
+      con los campos obligatorios completos.
+
+    columns:
+      - name: intervention_point_id
+        description: >
+          Identificador único del punto de venta. Campo obligatorio
+          y clave del modelo.
+        tests:
+          - not_null
+          - unique
+
+      - name: intervention_point_code
+        description: >
+          Código del punto de venta en el sistema propio. Campo opcional.
+
+      - name: intervention_point_name
+        description: >
+          Nombre del punto de venta, normalizado en mayúsculas. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: intervention_point_address
+        description: >
+          Dirección del punto de venta. Campo opcional.
+
+      - name: intervention_point_province
+        description: >
+          Provincia del punto de venta, normalizada en mayúsculas,
+          sin acentos y con nombres compuestos corregidos.
+          Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: intervention_point_locality
+        description: >
+          Localidad del punto de venta. Campo opcional.
+
+      - name: intervention_point_postal_code
+        description: >
+          Código postal del punto de venta. Campo opcional.
+          Se mantiene como texto.
+
+      - name: intervention_point_latitude
+        description: >
+          Latitud del punto de venta. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: intervention_point_longitude
+        description: >
+          Longitud del punto de venta. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: intervention_point_is_active
+        description: >
+          Indica si el punto de venta está activo. Campo opcional.
+          Si tiene valor, debe ser true o false.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: created_at
+        description: >
+          Fecha de creación del registro. Campo opcional.
+
+      - name: updated_at
+        description: >
+          Fecha de la última actualización del registro. Campo opcional.

@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: stg_visits
+    description: >
+      Modelo de staging con las visitas a puntos de venta limpias
+      y normalizadas a partir de la fuente raw_visits. Solo incluye registros
+      con los campos obligatorios completos.
+
+    columns:
+      - name: visit_id
+        description: >
+          Identificador único de la visita. Campo obligatorio y clave
+          del modelo.
+        tests:
+          - not_null
+          - unique
+
+      - name: intervention_point_id
+        description: >
+          Identificador del punto de venta visitado. Campo obligatorio.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_pos_unified')
+              field: omni_id
+
+      - name: route_id
+        description: >
+          Identificador de la ruta asociada a la visita.
+          Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: campaign_id
+        description: >
+          Identificador de la campaña asociada a la visita.
+          Campo obligatorio.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_campaigns')
+              field: campaign_id
+
+      - name: visit_date
+        description: >
+          Fecha en la que se realizó la visita. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: visit_status
+        description: >
+          Estado de la visita, normalizado en mayúsculas.
+          Campo obligatorio.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['OK', 'INCID', 'INFO', 'NOVIS']
+
+      - name: created_at
+        description: >
+          Fecha de creación del registro de visita. Campo opcional.
+
+      - name: updated_at
+        description: >
+          Fecha de la última actualización del registro de visita.
+          Campo obligatorio.
+        tests:
+          - not_null

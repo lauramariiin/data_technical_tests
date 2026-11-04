@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_projects
+    description: >
+      Modelo de staging con los proyectos por cliente limpios
+      y normalizados a partir de la fuente raw_projects. Solo incluye registros
+      con los campos obligatorios completos.
+
+    columns:
+      - name: project_id
+        description: >
+          Identificador único del proyecto. Campo obligatorio y clave
+          del modelo.
+        tests:
+          - not_null
+          - unique
+
+      - name: client_code
+        description: >
+          Código del cliente asociado al proyecto, normalizado
+          en mayúsculas. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: project_name
+        description: >
+          Nombre del proyecto. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Fecha de creación del proyecto. Campo opcional.
+
+      - name: updated_at
+        description: >
+          Fecha de la última actualización del proyecto. Campo opcional.

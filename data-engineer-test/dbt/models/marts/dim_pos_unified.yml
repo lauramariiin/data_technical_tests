@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: dim_pos_unified
+    description: >
+      Dimensión unificada de puntos de venta procedentes de los sistemas
+      OMNI y GI. La correspondencia se realiza mediante reglas basadas
+      en nombre normalizado más código postal y, como alternativa,
+      nombre normalizado más ciudad o localidad.
+
+    columns:
+      - name: pos_key
+        description: >
+          Clave maestra del punto de venta. Si existe en OMNI, se utiliza
+          su identificador; si solo existe en GI, se utiliza su identificador
+          externo.
+        tests:
+          - not_null
+          - unique
+
+      - name: omni_id
+        description: >
+          Identificador del punto de venta en OMNI. Nulo si el registro
+          procede únicamente de GI.
+
+      - name: gi_ext_id
+        description: >
+          Identificador externo del punto de venta en GI. Nulo si el registro
+          procede únicamente de OMNI.
+
+      - name: omni_code
+        description: >
+          Codigo del punto de venta en OMNI. Nulo si el registro
+          procede únicamente de GI.
+
+      - name: normalized_name
+        description: >
+          Nombre del punto de venta normalizado en mayúsculas y sin
+          espacios duplicados.
+
+      - name: normalized_city
+        description: >
+          Ciudad o localidad normalizada utilizada en la regla alternativa
+          de correspondencia.
+
+      - name: normalized_zip
+        description: >
+          Código postal normalizado utilizado en la regla principal
+          de correspondencia.
+
+      - name: match_status
+        description: >
+          Estado de match entre fuentes.
+        tests:
+          - accepted_values:
+              values: ['MATCHED', 'OMNI_ONLY', 'GI_ONLY']
+
+      - name: match_rule
+        description: >
+          Regla utilizada para emparejar el punto de venta.
+        tests:
+          - accepted_values:
+              values: ['NAME_AND_ZIP', 'NAME_AND_CITY']
+
+      - name: source_system
+        description: >
+          Fuentes de las que procede el registro.
+        tests:
+          - accepted_values:
+              values: ['OMNI', 'GI', 'OMNI+GI']
+
+      - name: is_active
+        description: >
+          Estado de actividad. Si alguna fuente indica que
+          el punto está activo, se considera activo.

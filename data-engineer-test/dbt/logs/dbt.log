@@ -1,0 +1,236 @@
+[0m19:59:27.319183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C4EFB63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C4BF3CF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C51587C50>]}
+
+
+============================== 19:59:27.325320 | 401efb23-d9f5-4a2b-86db-28f08b9c4aa7 ==============================
+[0m19:59:27.325320 [info ] [MainThread]: Running with dbt=1.12.6
+[0m19:59:27.325960 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt\\logs'}
+[0m19:59:27.361271 [info ] [MainThread]: dbt version: 1.12.6
+[0m19:59:27.361704 [info ] [MainThread]: python version: 3.13.2
+[0m19:59:27.362066 [info ] [MainThread]: python path: C:\Users\LAURA\AppData\Local\Programs\Python\Python313\python.exe
+[0m19:59:27.362465 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m19:59:27.367817 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DBT_HOST'
+[0m19:59:27.368621 [debug] [MainThread]: Command `dbt debug` failed at 19:59:27.368483 after 0.28 seconds
+[0m19:59:27.368967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C515F6C40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C5165A8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C5164DE10>]}
+[0m19:59:27.369298 [debug] [MainThread]: Flushing usage events
+[0m19:59:28.167898 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:00:23.673404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165741863C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001657106CF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016576757C50>]}
+
+
+============================== 20:00:23.678178 | 36922f7b-c84f-4c6a-96ed-9a3ba252d2b1 ==============================
+[0m20:00:23.678178 [info ] [MainThread]: Running with dbt=1.12.6
+[0m20:00:23.678763 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt\\logs'}
+[0m20:00:23.701506 [info ] [MainThread]: dbt version: 1.12.6
+[0m20:00:23.701901 [info ] [MainThread]: python version: 3.13.2
+[0m20:00:23.702224 [info ] [MainThread]: python path: C:\Users\LAURA\AppData\Local\Programs\Python\Python313\python.exe
+[0m20:00:23.702507 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m20:00:23.707692 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.postgres'
+[0m20:00:23.708157 [info ] [MainThread]: Using profiles dir at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt
+[0m20:00:23.708649 [info ] [MainThread]: Using profiles.yml file at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt\profiles.yml
+[0m20:00:23.708908 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt\dbt_project.yml
+[0m20:00:23.790561 [info ] [MainThread]: Configuration:
+[0m20:00:23.791174 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m20:00:23.791747 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:00:23.792307 [info ] [MainThread]: Required dependencies:
+[0m20:00:23.792995 [debug] [MainThread]: Executing "git --help"
+[0m20:00:23.849727 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:00:23.850134 [debug] [MainThread]: STDERR: "b''"
+[0m20:00:23.850509 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:00:23.850899 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m20:00:23.851225 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:00:23.851497 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "primer_impacto", target "dev" invalid: Runtime Error
+    Could not find adapter type postgres!
+
+
+[0m20:00:23.852146 [debug] [MainThread]: Command `dbt debug` failed at 20:00:23.852043 after 0.31 seconds
+[0m20:00:23.852463 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001657469AEA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165769CCCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165768ED6A0>]}
+[0m20:00:23.852735 [debug] [MainThread]: Flushing usage events
+[0m20:00:24.456490 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:01:55.563139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77A4663C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77732CF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77CA3BC50>]}
+
+
+============================== 20:01:55.568034 | a7ab3289-e6ae-46b5-82e4-c5919545304b ==============================
+[0m20:01:55.568034 [info ] [MainThread]: Running with dbt=1.12.6
+[0m20:01:55.568572 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'log_path': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt\\logs'}
+[0m20:01:55.589240 [info ] [MainThread]: dbt version: 1.12.6
+[0m20:01:55.589761 [info ] [MainThread]: python version: 3.13.2
+[0m20:01:55.590170 [info ] [MainThread]: python path: C:\Users\LAURA\AppData\Local\Programs\Python\Python313\python.exe
+[0m20:01:55.590437 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m20:01:55.672033 [info ] [MainThread]: Using profiles dir at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt
+[0m20:01:55.672636 [info ] [MainThread]: Using profiles.yml file at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt\profiles.yml
+[0m20:01:55.673096 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt\dbt_project.yml
+[0m20:01:55.674972 [info ] [MainThread]: adapter type: postgres
+[0m20:01:55.675391 [info ] [MainThread]: adapter version: 1.11.0
+[0m20:01:55.751398 [info ] [MainThread]: Configuration:
+[0m20:01:55.752074 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:01:55.752646 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:01:55.753308 [info ] [MainThread]: Required dependencies:
+[0m20:01:55.753895 [debug] [MainThread]: Executing "git --help"
+[0m20:01:55.795983 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:01:55.796393 [debug] [MainThread]: STDERR: "b''"
+[0m20:01:55.796720 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:01:55.797122 [info ] [MainThread]: Connection:
+[0m20:01:55.797653 [info ] [MainThread]:   host: postgres
+[0m20:01:55.798178 [info ] [MainThread]:   port: 5432
+[0m20:01:55.798436 [info ] [MainThread]:   user: postgres
+[0m20:01:55.798693 [info ] [MainThread]:   database: primer_impacto
+[0m20:01:55.798904 [info ] [MainThread]:   schema: public
+[0m20:01:55.799099 [info ] [MainThread]:   connect_timeout: 10
+[0m20:01:55.799296 [info ] [MainThread]:   role: None
+[0m20:01:55.799491 [info ] [MainThread]:   search_path: None
+[0m20:01:55.799677 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:01:55.799912 [info ] [MainThread]:   sslmode: None
+[0m20:01:55.800156 [info ] [MainThread]:   sslcert: None
+[0m20:01:55.800436 [info ] [MainThread]:   sslkey: None
+[0m20:01:55.800689 [info ] [MainThread]:   sslrootcert: None
+[0m20:01:55.800970 [info ] [MainThread]:   application_name: dbt
+[0m20:01:55.801220 [info ] [MainThread]:   autocommit: False
+[0m20:01:55.801497 [info ] [MainThread]:   retries: 1
+[0m20:01:55.801895 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m20:01:56.280224 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:02:02.296762 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:02:02.298372 [debug] [MainThread]: On debug: select 1 as id
+[0m20:02:02.299013 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:02:05.019233 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgres" to address: Name or service not known
+
+[0m20:02:07.289840 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m20:02:07.290645 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m20:02:07.291296 [debug] [MainThread]: On debug: No close available on handle
+[0m20:02:07.291901 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m20:02:07.293406 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:02:07.295068 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "postgres" to address: Name or service not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:02:07.299449 [debug] [MainThread]: Command `dbt debug` failed at 20:02:07.299041 after 11.87 seconds
+[0m20:02:07.300736 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:02:07.301769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77CD3CE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77CE957F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77CD8B570>]}
+[0m20:02:07.302852 [debug] [MainThread]: Flushing usage events
+[0m20:02:07.971316 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:03:28.758780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C36B5463C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C36840CF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C36DB17C50>]}
+
+
+============================== 20:03:28.763776 | 363d8f0b-3073-4e91-8d57-c52caba120fb ==============================
+[0m20:03:28.763776 [info ] [MainThread]: Running with dbt=1.12.6
+[0m20:03:28.764574 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt', 'invocation_command': 'dbt debug', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt\\logs'}
+[0m20:03:28.790843 [info ] [MainThread]: dbt version: 1.12.6
+[0m20:03:28.791441 [info ] [MainThread]: python version: 3.13.2
+[0m20:03:28.791786 [info ] [MainThread]: python path: C:\Users\LAURA\AppData\Local\Programs\Python\Python313\python.exe
+[0m20:03:28.792040 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m20:03:28.849359 [info ] [MainThread]: Using profiles dir at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt
+[0m20:03:28.850040 [info ] [MainThread]: Using profiles.yml file at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt\profiles.yml
+[0m20:03:28.850529 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\LAURA\data_technical_tests\data-engineer-test\dbt\dbt_project.yml
+[0m20:03:28.851702 [info ] [MainThread]: adapter type: postgres
+[0m20:03:28.852281 [info ] [MainThread]: adapter version: 1.11.0
+[0m20:03:28.927833 [info ] [MainThread]: Configuration:
+[0m20:03:28.928539 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:03:28.929016 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:03:28.929553 [info ] [MainThread]: Required dependencies:
+[0m20:03:28.929896 [debug] [MainThread]: Executing "git --help"
+[0m20:03:28.965089 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:03:28.965483 [debug] [MainThread]: STDERR: "b''"
+[0m20:03:28.965915 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:03:28.966421 [info ] [MainThread]: Connection:
+[0m20:03:28.966768 [info ] [MainThread]:   host: localhost
+[0m20:03:28.966987 [info ] [MainThread]:   port: 5432
+[0m20:03:28.967184 [info ] [MainThread]:   user: postgres
+[0m20:03:28.967383 [info ] [MainThread]:   database: primer_impacto
+[0m20:03:28.967566 [info ] [MainThread]:   schema: public
+[0m20:03:28.967743 [info ] [MainThread]:   connect_timeout: 10
+[0m20:03:28.967917 [info ] [MainThread]:   role: None
+[0m20:03:28.968086 [info ] [MainThread]:   search_path: None
+[0m20:03:28.968255 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:03:28.968808 [info ] [MainThread]:   sslmode: None
+[0m20:03:28.969112 [info ] [MainThread]:   sslcert: None
+[0m20:03:28.969332 [info ] [MainThread]:   sslkey: None
+[0m20:03:28.969522 [info ] [MainThread]:   sslrootcert: None
+[0m20:03:28.969705 [info ] [MainThread]:   application_name: dbt
+[0m20:03:28.969882 [info ] [MainThread]:   autocommit: False
+[0m20:03:28.970068 [info ] [MainThread]:   retries: 1
+[0m20:03:28.970413 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m20:03:29.085882 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:03:29.115169 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:03:29.115455 [debug] [MainThread]: On debug: select 1 as id
+[0m20:03:29.115627 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:03:33.190037 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+[0m20:03:37.289099 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m20:03:37.290130 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m20:03:37.290801 [debug] [MainThread]: On debug: No close available on handle
+[0m20:03:37.291329 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m20:03:37.291908 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:03:37.292557 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+  	Is the server running on that host and accepting TCP/IP connections?
+  connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+  	Is the server running on that host and accepting TCP/IP connections?
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:03:37.294416 [debug] [MainThread]: Command `dbt debug` failed at 20:03:37.294211 after 8.68 seconds
+[0m20:03:37.294738 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:03:37.295048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C36DDECE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C36DF457F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C36DE37570>]}
+[0m20:03:37.295400 [debug] [MainThread]: Flushing usage events
+[0m20:03:37.923718 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:20:40.629285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023ACF9E63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AD202BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AD202BB10>]}
+
+
+============================== 20:20:40.633960 | 67df69fb-4e33-4c70-a51c-7097f8af1743 ==============================
+[0m20:20:40.633960 [info ] [MainThread]: Running with dbt=1.12.6
+[0m20:20:40.634500 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\LAURA\\data_technical_tests\\data-engineer-test\\dbt\\logs'}
+[0m20:20:40.827108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '67df69fb-4e33-4c70-a51c-7097f8af1743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023ACFEFAEA0>]}
+[0m20:20:40.878232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '67df69fb-4e33-4c70-a51c-7097f8af1743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023ACF6BB680>]}
+[0m20:20:40.879819 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m20:20:41.176044 [debug] [MainThread]: checksum: ee07ccecd6c5b8695e353b78961fc26057f28aa6cb0d5caaba4074ebf50d3ce9, vars: {}, profile: primer_impacto, target: dev, version: 1.12.6
+[0m20:20:41.177158 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:20:41.177830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '67df69fb-4e33-4c70-a51c-7097f8af1743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AD25D8250>]}
+[0m20:20:45.983144 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on 'dim_pos_unified'
+in package 'primer_impacto' (models\marts\dim_pos_unified.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m20:20:45.983945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '67df69fb-4e33-4c70-a51c-7097f8af1743', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AD1FC7110>]}
+[0m20:20:46.171918 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Compilation Error
+  Model 'model.primer_impacto.stg_campaigns' (models\staging\stg_campaigns.sql) depends on a source named 'raw.raw_campaigns' which was not found
+[0m20:20:46.172955 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 16 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m20:20:46.174376 [debug] [MainThread]: Command `dbt test` failed at 20:20:46.174188 after 5.73 seconds
+[0m20:20:46.174856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AD1E87E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AD29A25F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AD26D31E0>]}
+[0m20:20:46.175395 [debug] [MainThread]: Flushing usage events
+[0m20:20:46.828280 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_pos_gi
+    description: >
+      Modelo de staging con los puntos de venta procedentes del sistema
+      partner GI, limpios y normalizados a partir de la fuente pos_gi. Solo incluye registros con
+      los campos obligatorios completos.
+
+    columns:
+      - name: ext_id
+        description: >
+          Identificador externo del punto de venta en el sistema GI.
+          Campo obligatorio y clave natural de la fuente.
+        tests:
+          - not_null
+          - unique
+
+      - name: point_name
+        description: >
+          Nombre del punto de venta, sin espacios duplicados.
+          Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: address_street
+        description: >
+          Calle de la dirección del punto de venta. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: address_number
+        description: >
+          Número de la dirección del punto de venta. Campo obligatorio.
+          Se mantiene como texto.
+        tests:
+          - not_null
+
+      - name: address_city
+        description: >
+          Ciudad o localidad del punto de venta. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: address_zip
+        description: >
+          Código postal del punto de venta. Campo obligatorio.
+          Se mantiene como texto para preservar ceros iniciales.
+        tests:
+          - not_null
+
+      - name: is_active
+        description: >
+          Indica si el punto de venta está activo en el sistema GI.
+          Campo opcional. Si tiene valor, debe ser true o false.
+        tests:
+          - accepted_values:
+              values: [true, false]

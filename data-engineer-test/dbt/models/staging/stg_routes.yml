@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_routes
+    description: >
+      Modelo de staging con las rutas por campaña limpias y normalizadas
+      a partir de la fuente raw_routes. Solo incluye registros con los campos
+      obligatorios completos.
+
+    columns:
+      - name: route_id
+        description: >
+          Identificador único de la ruta. Campo obligatorio y clave
+          del modelo.
+        tests:
+          - not_null
+          - unique
+
+      - name: campaign_id
+        description: >
+          Identificador de la campaña asociada a la ruta.
+          Campo obligatorio.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_campaigns')
+              field: campaign_id
+
+      - name: route_start_date
+        description: >
+          Fecha de inicio de la ruta. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: route_end_date
+        description: >
+          Fecha de fin de la ruta. Campo obligatorio.
+        tests:
+          - not_null
+
+      - name: route_status
+        description: >
+          Estado de la ruta, normalizado en mayúsculas.
+          Campo obligatorio.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['OK', 'GRABADO']
+
+      - name: created_at
+        description: >
+          Fecha de creación del registro de ruta. Campo opcional.
